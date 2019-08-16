@@ -1,4 +1,4 @@
-import React,{useEffect} from  'react';
+import React,{useEffect} from 'react';
 
 export default  function Header() {
     const imgLogo = {url:'https://i.ibb.co/mNBzXkz/logo.png',title:'logo'};

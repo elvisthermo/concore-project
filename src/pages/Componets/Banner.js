@@ -1,9 +1,9 @@
-import React from  'react';
+import React from 'react';
 
 export default  function Banner() {
 
     const url ={};
-    const title=["A revolução no","desenvolvimento","de inovação digital"]
+    const title=["A revolução no","desenvolvimento","de inovação digital."]
     const description=["Projeto e desenvolvimento de software prático, eficiente","e dentro do orçamento."]
 
     return(
@@ -19,8 +19,8 @@ export default  function Banner() {
 
                         <p>{description[0]}<br/>{description[1]}</p>
                         <div className="link-scroll">
-                            <a href="javascript:" className="scrolldown hvr-wobble-vertical"><i
-                                className="fas fa-chevron-down"></i></a>
+                            <a href="javascript:" className="scrolldown hvr-wobble-vertical">
+                                <i className="fas fa-chevron-down"></i></a>
                         </div>
                     </div>
                 </div>

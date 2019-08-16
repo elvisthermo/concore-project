@@ -1,18 +1,12 @@
 import React from 'react';
-import './App.css';
-import {Main} from "./pages/Main";
+import './pages/css/styles.css';
+import {Main} from "./pages/Componets/Main";
 
 function App() {
     return (
-        <html lang="en" >
-        <head>
-
-        </head>
-        <body>
         <Main/>
 
-        </body>
-        </html>
+
     );
 }
 

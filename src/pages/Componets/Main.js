@@ -2,7 +2,7 @@ import React,{useEffect} from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import $ from "jquery";
-import mask from 'jquery-mask-plugin'
+import mask from 'jquery-mask-plugin';
 import AOS from 'aos'
 import Banner from "./Banner";
 import About from "./About";
@@ -12,8 +12,6 @@ export function Main() {
     {useEffect(()=>{
         function f() {
             $(document).ready(function(){
-                console.log( "ready!" );
-
                 $('.scrolldown').click(function(){
                     $('html, body').animate({scrollTop: $('.sobre').offset().top }, 'slow');
                 });
@@ -69,18 +67,9 @@ export function Main() {
     })}
 
     return(
-    <html lang="pt">
+    <>
 
-    <head>
-        <meta charSet="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        {/*<meta http-equiv="X-UA-Compatible" content="ie=edge"/>*/}
-        <title>Concore</title>
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&amp;display=swap"/>
-    </head>
-
-    <body>
     <Header/>
 
     <Banner/>
@@ -90,12 +79,7 @@ export function Main() {
 
     <Footer/>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="assets/js/aos.min.js"></script>
-    <script src="assets/js/funcoes.js"></script>
+    </>
 
-    </body>
-    </html>
     )
 }

@@ -1,8 +1,8 @@
-import React from  'react';
+import React from 'react';
 
 export default  function Solutions(props) {
     const imgGradient = {url:"https://i.ibb.co/wCJj8hV/divider-gradient.png",title:'Gradient divider'}
-
+    //items do carrosel
     const carouselOfItems = [
         {url:"https://i.ibb.co/2Ykg2yD/case-ingresse.png",
             alt:"Concore",
@@ -31,15 +31,15 @@ export default  function Solutions(props) {
                     </div>
 
                     <div className="col-md-12">
-
-                    <LongCard name={"bg-sprint"} fade={"fade-left"}
+                    {/*componetes cards saiba mais*/}
+                    <LongCard name={"bg-sprint"} value={"fade-left"}
                         link={"sprintzero.html"} img={{url:"https://i.ibb.co/8PpHxQQ/logo-sprint-zero.png",title:"Sprint zero"}}
-                     text={"Comece transformando a sua ideia em um projeto de software completo e com protótipo navegável"}
+                     text={"Comece transformando a sua ideia em um projeto de software completo e com protótipo navegável."}
                     />
 
-                    <LongCard name={"bg-innovation"} fade={"fade-right"}
+                    <LongCard name={"bg-innovation"} value={"fade-right"}
                                   link={"innovationsquad.html"} img={{url:"https://i.ibb.co/fpWvVKS/logo-innovationsquad.png",title:"Innovation squad"}}
-                                  text={"Tenha a disposição uma equipe sênior para projeto e desenvolvimento do seu software"}
+                                  text={"Tenha a disposição uma equipe sênior para projeto e desenvolvimento do seu software."}
                     />
                     </div>
                 </div>
@@ -78,11 +78,11 @@ export default  function Solutions(props) {
     )
 }
 
-
+//cards com animação lateral
 function LongCard(props) {
     return(
         <a href={props.link}>
-            <div className={props.name} data-aos={props.fade}>
+            <div className={props.name} data-aos={props.value}>
                 <div className="row">
                     <div className="col-md-5 text-center">
                         <div className="img-solucoes">
@@ -102,6 +102,7 @@ function LongCard(props) {
     )
 }
 
+//carossel itens
 function SlidingCarousel(props) {
     return(
         <>
