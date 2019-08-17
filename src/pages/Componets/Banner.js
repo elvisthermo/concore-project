@@ -1,11 +1,8 @@
 import React from 'react';
 
-export default  function Banner() {
-
-    const url ={};
-    const title=["A revolução no","desenvolvimento","de inovação digital."]
-    const description=["Projeto e desenvolvimento de software prático, eficiente","e dentro do orçamento."]
-
+export default  function Banner(props) {
+    const title= props.title
+    const description= props.description
     return(
         <section className="banner">
             <div className="container">

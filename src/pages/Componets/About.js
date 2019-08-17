@@ -1,19 +1,15 @@
 import React from 'react';
+//array dos componetes cards
+const textCard1 = ['Tecnologia própria que nos permite desenvolver de forma mais eficiente e rápida ','economizando preciosos recursos.'];
+const textCard2 = ['Nossa equipe respira tecnologia e inovação há mais de 10 anos ','gerando soluções assertivas e práticas.'];
+const textCard3 = ['Criamos estimativas técnicas com base em dados científicos ','gerando assertividade.'];
 
-export default  function About() {
-    const urlImage ={url:"https://i.ibb.co/gSThfmR/img-section-about.png",title:"Concore"};
-    const urlGradinet ={url:"https://i.ibb.co/wCJj8hV/divider-gradient.png",title:"Gradient divider"};
+export default  function About(props) {
 
-    const title=["Grande parte dos projetos de software falham em custo, prazo ou valor entregue."];
-
-    const description = ["A Concore surgiu com a missão de descomplicar o desenvolvimento de software e tornar a inovação tecnológica acessível para todas as empresas.",
-        "Nós criamos a plataforma que permite desenvolver softwares customizados à uma fração do tempo tradicional.",
-        "Nossa ferramenta, aliada ao nosso time especialista em inovação, nos permite criar soluções em projetos de softwares que atendem fielmente as regras do seu negócio."]
-
-    //cards array dos componetes
-    const textCard1 = ['Tecnologia própria que nos permite desenvolver de forma mais eficiente e rápida','economizando preciosos recursos.'];
-    const textCard2 = ['Nossa equipe respira tecnologia e inovação há mais de 10 anos ','gerando soluções assertivas e práticas.'];
-    const textCard3 = ['Criamos estimativas técnicas com base em dados científicos ','gerando assertividade.'];
+    const urlImage = props.urlImage;
+    const urlGradinet = props.gradinet;
+    const title= props.title;
+    const description = props.description
 
     return(
         <section className="sobre">

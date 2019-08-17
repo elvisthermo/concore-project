@@ -1,14 +1,10 @@
 import React,{useEffect} from 'react';
 
-export default  function Header() {
-    const imgLogo = {url:'https://i.ibb.co/mNBzXkz/logo.png',title:'logo'};
-    const imgIconMenu ={url:'https://i.ibb.co/fdn2xrR/hamburguer.png',title:''};
+export default  function Header(props) {
+    const imgLogo = props.imgLogo;
+    const imgIconMenu = props.imgIconMenu;
 
-    const menuLinks =[
-        {link:'index.html',name:'Home'},
-        {link:'sprintzero.html',name:'Sprint Zero'},
-        {link:'innovationsquad.html',name:'Innovation Squad'},
-        {link:'javascript',name:'Blog'}]
+    const menuLinks =props.menuLinks;
 
     useEffect(()=>{
       function loadImg() {
@@ -23,7 +19,7 @@ export default  function Header() {
                 <div className="row">
                     <nav className="navbar navbar-expand-md navbar-light nav-header col-md-12">
                         <div className="menu-holder">
-                            <a href="index.html"><img className={imgLogo.title} src={imgLogo.url}
+                            <a href="/"><img className={imgLogo.title} src={imgLogo.url}
                                                       alt="Concore"/></a>
                         </div>
                         <button className="navbar-toggler collapsed" type="button" data-toggle="collapse"
@@ -37,7 +33,9 @@ export default  function Header() {
                         <div className="navbar-collapse collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav mx-auto">
                                 {menuLinks.map((link,i)=>(
-                                <li key={i}><a className="link" href={link.link} data-link="true">{link.name}</a></li>
+                                    //deixar home button acesso
+                                    i===0?<li key={i}><a className="link" href={link.link} data-link="true">{link.name}</a></li>//verificação para ativar apenas o primero item
+                                    : <li key={i}><a className="link" href={link.link} data-link="false">{link.name}</a></li>
 
                                 ))}
                             </ul>

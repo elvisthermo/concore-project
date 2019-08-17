@@ -1,23 +1,24 @@
 import React from 'react';
+//items do carrosel
+const carouselOfItems = [
+    {url:"https://i.ibb.co/2Ykg2yD/case-ingresse.png",
+        alt:"Concore",
+        title:"Cliente: Ingresse S.A",
+        subtitle:"Diminuinos o tempo de repasses financeiros de horas para minutos.",
+        descriptrion:"Nós projetamos em conjunto com o setor financeiro da Ingresse uma ferramenta de solicitação e gestão de repasses financeiros." +
+            " O processo de repasse era realizado por planilhas, o que resultava em eventuais erros, perdas e dificuldade de gestão em grande volume."},
+
+    {url:"https://i.ibb.co/2Ykg2yD/case-ingresse.png",
+        alt:"Concore",
+        title:"Cliente: Ingresse S.A",
+        subtitle:"Diminuinos o tempo de repasses financeiros de horas para minutos.",
+        descriptrion:"Nós projetamos em conjunto com o setor financeiro da Ingresse uma ferramenta de solicitação e gestão de repasses financeiros." +
+            " O processo de repasse era realizado por planilhas, o que resultava em eventuais erros, perdas e dificuldade de gestão em grande volume."}
+];
+
 
 export default  function Solutions(props) {
-    const imgGradient = {url:"https://i.ibb.co/wCJj8hV/divider-gradient.png",title:'Gradient divider'}
-    //items do carrosel
-    const carouselOfItems = [
-        {url:"https://i.ibb.co/2Ykg2yD/case-ingresse.png",
-            alt:"Concore",
-            title:"Cliente: Ingresse S.A",
-            subtitle:"Diminuinos o tempo de repasses financeiros de horas para minutos.",
-            descriptrion:"Nós projetamos em conjunto com o setor financeiro da Ingresse uma ferramenta de solicitação e gestão de repasses financeiros." +
-                " O processo de repasse era realizado por planilhas, o que resultava em eventuais erros, perdas e dificuldade de gestão em grande volume."},
-
-        {url:"https://i.ibb.co/2Ykg2yD/case-ingresse.png",
-            alt:"Concore",
-            title:"Cliente: Ingresse S.A",
-            subtitle:"Diminuinos o tempo de repasses financeiros de horas para minutos.",
-            descriptrion:"Nós projetamos em conjunto com o setor financeiro da Ingresse uma ferramenta de solicitação e gestão de repasses financeiros." +
-                " O processo de repasse era realizado por planilhas, o que resultava em eventuais erros, perdas e dificuldade de gestão em grande volume."}
-    ];
+    const imgGradient = props.gradinet;
 
     return(
         <section className="solucoes">
@@ -31,7 +32,7 @@ export default  function Solutions(props) {
                     </div>
 
                     <div className="col-md-12">
-                    {/*componetes cards saiba mais*/}
+                    {/*componetes cards saiba mais já com os */}
                     <LongCard name={"bg-sprint"} value={"fade-left"}
                         link={"sprintzero.html"} img={{url:"https://i.ibb.co/8PpHxQQ/logo-sprint-zero.png",title:"Sprint zero"}}
                      text={"Comece transformando a sua ideia em um projeto de software completo e com protótipo navegável."}

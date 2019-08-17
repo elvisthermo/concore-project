@@ -1,20 +1,9 @@
 import React from 'react';
 import FormEmail from "./FormEmail";
 
-export default  function Footer() {
-    const img = {url:"https://i.ibb.co/TwmbBYF/logo-footer.png",alt:"Logo Concore"}
-    //array object links e icones
-    const iconAndLink =[
-        {url:"https://i.ibb.co/jr84Tb7/facebook.png",
-            alt:"Facebook Concore",
-            link:"https://www.facebook.com/concore.io/"},
-        {url:"https://i.ibb.co/FbXYT8S/linkedin.png",
-            alt:"Linkedin Concore",
-            link:"https://www.linkedin.com/company/concore.io/"},
-        {url:"https://i.ibb.co/FbXYT8S/linkedin.png",
-            alt:"Instagram Concore",
-            link:"https://www.instagram.com/concore.oficial/"}
-            ];
+export default  function Footer(props) {
+    const img = props.img;
+    const iconAndLink = props.iconAndLink;
 
     return(
         <footer>
@@ -25,10 +14,10 @@ export default  function Footer() {
                         <ul>
                             {iconAndLink.map(item=>(
                                 <li key={item.alt}>
-                                <a href={item.link} target="_blank">
-                                    <img  src={item.url}  alt={item.alt}/>
-                                </a>
-                            </li>
+                                    <a href={item.link} target="_blank">
+                                        <img  src={item.url}  alt={item.alt}/>
+                                    </a>
+                                </li>
                             ))}
                         </ul>
                     </div>

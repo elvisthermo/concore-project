@@ -1,12 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import './pages/css/styles.css';
+import { BrowserRouter as Router, Route,Switch} from "react-router-dom";
+import {Main} from "./pages/Componets/Main";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const NoMatch = ({ location }) => (
+    <div>
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+    <div style={{display:'flex',justifyContent: 'center'}}>
+        <h3>
+            Página em construção<code>{location.pathname}</code>
+        </h3>
+    </div>
+        <div style={{display:'flex',justifyContent: 'center'}}>
+            <a style={{justifyContent: 'center'}} href="/"><p>Voltar</p></a>
+        </div>
+    </div>
+)
+
+ReactDOM.render(
+    (<Router >
+        <Switch>
+        <Route  exact path="/" component={Main} />
+        <Route component={NoMatch} />
+        </Switch>
+    </Router>),
+    document.getElementById('root')
+
+);
